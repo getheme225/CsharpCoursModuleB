@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O_n_2 Algorithm", "O_n_2 Algorithm\O_n_2 Algorithm.csproj", "{6872C3AA-5262-43B4-91C4-AAB66752EBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParser", "MathParser\MathParser.csproj", "{A5FE94B5-2EDD-478A-855B-9FBD2CCE822F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunMathParser", "RunMathParser\RunMathParser.csproj", "{B447867B-35D9-4B1B-AAAF-7867E207A030}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6872C3AA-5262-43B4-91C4-AAB66752EBA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6872C3AA-5262-43B4-91C4-AAB66752EBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6872C3AA-5262-43B4-91C4-AAB66752EBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6872C3AA-5262-43B4-91C4-AAB66752EBA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5FE94B5-2EDD-478A-855B-9FBD2CCE822F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5FE94B5-2EDD-478A-855B-9FBD2CCE822F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5FE94B5-2EDD-478A-855B-9FBD2CCE822F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5FE94B5-2EDD-478A-855B-9FBD2CCE822F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
