@@ -28,14 +28,13 @@ namespace MathParser
             {
                 if (IsNumbersOrComma(a,ref number, tokens)) continue;
                 if (IsOperator(a, tokens)) continue;
-                number += a;
+                constant += a;
                 function += a;
-                if ((!Isfunction(ref function, tokens) || !IsConstant(ref constant, tokens))) continue;
-
-                isError = true;
+                if ((Isfunction(ref function, tokens))^(IsConstant(ref constant, tokens))) continue;
+                
             }
             if(number!="") tokens.Add(new Token(number,TokenType.Number));
-            if(isError) throw new ArgumentException("Bad exeption string");
+            
             return tokens;
         }
 
@@ -55,14 +54,15 @@ namespace MathParser
 
         private static bool IsNumbersOrComma(char a,ref string number,List<Token> tokens)
         {
-            if (char.IsDigit(a) || a == '.')
+            if (!(char.IsDigit(a) || a == '.'))
             {
-                number += a.ToString(CultureInfo.InvariantCulture);
-                return true;               
+                if (number == "") return false;
+                tokens.Add(new Token(number, TokenType.Number)); number = "";
+                return false;
             }
-            tokens.Add(new Token(number,TokenType.Number));
-            number = "";
-            return false;
+           
+            number += a.ToString(CultureInfo.InvariantCulture);
+            return true;
         }
 
         private static bool IsOperator(char a, List<Token> tokens)
@@ -194,7 +194,6 @@ namespace MathParser
             return double.Parse(lexeme.Replace(',', '.'),CultureInfo.InvariantCulture); 
         }
     }
-    
  }
 
 

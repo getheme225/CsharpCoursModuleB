@@ -43,7 +43,6 @@ namespace MathParser
         public bool Empty()
         {
             return (_tokens.Count == 0);
-        }
-        
+        }      
     }
 }
