@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O_n_2 Algorithm", "O_n_2 Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParser", "MathParser\MathParser.csproj", "{A5FE94B5-2EDD-478A-855B-9FBD2CCE822F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunMathParser", "RunMathParser\RunMathParser.csproj", "{B447867B-35D9-4B1B-AAAF-7867E207A030}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "RunMathParser\Runner.csproj", "{B447867B-35D9-4B1B-AAAF-7867E207A030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorCore", "VectorCore\VectorCore.csproj", "{A8626003-DEE1-4362-8C44-D1152B09F865}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B447867B-35D9-4B1B-AAAF-7867E207A030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8626003-DEE1-4362-8C44-D1152B09F865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8626003-DEE1-4362-8C44-D1152B09F865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8626003-DEE1-4362-8C44-D1152B09F865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8626003-DEE1-4362-8C44-D1152B09F865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

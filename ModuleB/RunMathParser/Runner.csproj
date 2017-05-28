@@ -54,6 +54,10 @@
       <Project>{a5fe94b5-2edd-478a-855b-9fbd2cce822f}</Project>
       <Name>MathParser</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VectorCore\VectorCore.csproj">
+      <Project>{a8626003-dee1-4362-8c44-d1152b09f865}</Project>
+      <Name>VectorCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
