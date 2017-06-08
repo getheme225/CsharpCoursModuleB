@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B447867B-35D9-4B1B-AAAF-7867E207A030}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2CE2B8DB-FAB1-4B9F-8627-F5474EDC3B53}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RunMathParser</RootNamespace>
-    <AssemblyName>RunMathParser</AssemblyName>
+    <RootNamespace>AgeCounter</RootNamespace>
+    <AssemblyName>AgeCounter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AgeCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AgeCounter\AgeCounter.csproj">
-      <Project>{2ce2b8db-fab1-4b9f-8627-f5474edc3b53}</Project>
-      <Name>AgeCounter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MathParser\MathParser.csproj">
-      <Project>{a5fe94b5-2edd-478a-855b-9fbd2cce822f}</Project>
-      <Name>MathParser</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VectorCore\VectorCore.csproj">
-      <Project>{a8626003-dee1-4362-8c44-d1152b09f865}</Project>
-      <Name>VectorCore</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

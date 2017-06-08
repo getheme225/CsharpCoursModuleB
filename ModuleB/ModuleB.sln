@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "RunMathParser\Run
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorCore", "VectorCore\VectorCore.csproj", "{A8626003-DEE1-4362-8C44-D1152B09F865}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomICollection", "CustomICollection\CustomICollection.csproj", "{2D8499E9-61F7-486F-8029-50AA907C3592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeCounter", "AgeCounter\AgeCounter.csproj", "{2CE2B8DB-FAB1-4B9F-8627-F5474EDC3B53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A8626003-DEE1-4362-8C44-D1152B09F865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8626003-DEE1-4362-8C44-D1152B09F865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8626003-DEE1-4362-8C44-D1152B09F865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8499E9-61F7-486F-8029-50AA907C3592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8499E9-61F7-486F-8029-50AA907C3592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8499E9-61F7-486F-8029-50AA907C3592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8499E9-61F7-486F-8029-50AA907C3592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE2B8DB-FAB1-4B9F-8627-F5474EDC3B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE2B8DB-FAB1-4B9F-8627-F5474EDC3B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE2B8DB-FAB1-4B9F-8627-F5474EDC3B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE2B8DB-FAB1-4B9F-8627-F5474EDC3B53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

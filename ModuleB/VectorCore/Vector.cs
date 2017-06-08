@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace VectorCore
 {
-    public class Vector<T> : IEnumerable where T : struct
+    public class Vector<T>  where T : struct
     {
         public T X { get; private set; }
         public T Y { get; private set; }
@@ -121,16 +121,6 @@ namespace VectorCore
             return string.Format($"X= {X} Y= {Y}");
         }
 
-
-        public IEnumerator<Vector<T>> GetEnumerator()
-        {
-            return (new List<Vector<T>>()).Cast<Vector<T>>().GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-
+        
     }  
 }
