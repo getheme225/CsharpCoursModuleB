@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BM25DbAcces.Model;
 
-namespace BM25DbAcces.Model
+namespace BM25
 {
    public partial class Word
     {
