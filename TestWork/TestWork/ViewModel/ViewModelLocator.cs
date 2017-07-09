@@ -46,12 +46,14 @@ namespace TestWork.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<MainPageViewModel>();
             SimpleIoc.Default.Register<CarWorkViewModel>();
+            SimpleIoc.Default.Register<PayBookViewModel>();
         
         }
 
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
         public MainPageViewModel MainPage => ServiceLocator.Current.GetInstance<MainPageViewModel>();
         public CarWorkViewModel CarWorkVm => ServiceLocator.Current.GetInstance<CarWorkViewModel>();
+        public PayBookViewModel PayBookVM => ServiceLocator.Current.GetInstance<PayBookViewModel>();
        
        public static void Cleanup()
         {

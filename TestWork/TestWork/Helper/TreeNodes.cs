@@ -50,7 +50,11 @@ namespace TestWork.Helper
         /// Флаг выбранный элемент 
         /// </summary>
         public bool IsSelected { get; set; }
-
+        /// <summary>
+        /// Selected Nodes
+        /// </summary>
+        /// <param name="nodes"></param>
+        /// <returns></returns>
         public static Object SelectecNodes(IEnumerable<TreeNodes> nodes)
         {
             return (from node in nodes where node.IsSelected select node.Item).FirstOrDefault();

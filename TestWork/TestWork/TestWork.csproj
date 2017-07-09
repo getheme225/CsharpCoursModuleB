@@ -82,6 +82,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helper\AttachePropretySelectedItem.cs" />
+    <Compile Include="Helper\ZeroValidationRules.cs" />
     <Compile Include="Helper\IPageOpenable.cs" />
     <Compile Include="Helper\TreeNodes.cs" />
     <Compile Include="Pages\CarWork.xaml.cs">
@@ -96,6 +97,7 @@
     <Compile Include="ViewModel\CarWorkViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\PayBookViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +153,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PayBookModel\PayBookModel.csproj">
+      <Project>{1c4d3f7d-a58c-4e8f-a9c6-ff5ad86f6f29}</Project>
+      <Name>PayBookModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Work1_Car\Work1_Car.csproj">
       <Project>{38478dea-e388-4746-b691-c34842073032}</Project>
       <Name>Work1_Car</Name>

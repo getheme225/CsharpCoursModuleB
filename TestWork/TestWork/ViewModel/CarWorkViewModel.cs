@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using PropertyChanged;
 using TestWork.Helper;
-using TestWork.Pages;
-using Work1_Car;
+using Work1_Car; 
 
 namespace TestWork.ViewModel
 {
