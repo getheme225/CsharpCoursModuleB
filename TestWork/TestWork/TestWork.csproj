@@ -82,14 +82,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helper\IPageOpenable.cs" />
+    <Compile Include="Helper\TreeNodes.cs" />
     <Compile Include="Pages\CarWork.xaml.cs">
       <DependentUpon>CarWork.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\CreateCar.xaml.cs">
-      <DependentUpon>CreateCar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\DetailsPage.xaml.cs">
-      <DependentUpon>DetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -98,8 +93,6 @@
       <DependentUpon>PayBook.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CarWorkViewModel.cs" />
-    <Compile Include="ViewModel\CreateCarViewModel.cs" />
-    <Compile Include="ViewModel\DetailPagesViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -116,14 +109,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\CarWork.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\CreateCar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\DetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

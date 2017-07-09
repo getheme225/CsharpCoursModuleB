@@ -7,39 +7,91 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="CarWork"
     d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignWidth="600"
     DataContext="{Binding CarWorkVm, Source={StaticResource Locator}}"
     mc:Ignorable="d">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Button
-            Grid.Row="0"
-            Margin="10"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--  Создания Машины  -->
+        <StackPanel Grid.Column="0">
+            <Label
+                HorizontalAlignment="Center"
+                Content="Создания Машины"
+                FontSize="15" />
+            <WrapPanel Margin="0,10,0,0">
+                <Label Content="Называние машины: " />
+                <TextBox MinWidth="100" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <Label Content="Количество колеса: " />
+                <TextBox MinWidth="50" Text="{Binding CountWheel, UpdateSourceTrigger=PropertyChanged}" />
+                <Label Margin="5,0,0,0" Content="Вес" />
+                <TextBox MinWidth="50" Text="{Binding WheelWeight, UpdateSourceTrigger=PropertyChanged}" />
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <Label Content="Количество двери:  " />
+                <TextBox MinWidth="50" Text="{Binding CountDoors, UpdateSourceTrigger=PropertyChanged}" />
+                <Label Margin="5,0,0,0" Content="Вес" />
+                <TextBox MinWidth="50" Text="{Binding DoorsWeight, UpdateSourceTrigger=PropertyChanged}" />
+            </WrapPanel>
+            <WrapPanel Margin="0,10,0,0">
+                <Label Content="Вес рамки:  " />
+                <TextBox
+                    MinWidth="50"
+                    Margin="5,0,0,0"
+                    Text="{Binding BodyWeight, UpdateSourceTrigger=PropertyChanged}" />
+            </WrapPanel>
+            <Button
+                MinWidth="50"
+                MinHeight="25"
+                Margin="20"
+                HorizontalAlignment="Center"
+                Command="{Binding BtsOkRelayCommand}"
+                Content="OK" />
+        </StackPanel>
+        <!--  Тесктовое поле  -->
+        <TextBlock Grid.Column="1" Text="{Binding TectResult}" />
+        <!--  Дерево вложенния  -->
+        <TreeView Grid.Column="2" ItemsSource="{Binding Tree}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Childreens}">
+                    <TextBlock Text="{Binding Name}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <!--  управления  -->
+        <StackPanel
+            Grid.Column="3"
             HorizontalAlignment="Center"
-            Command="{Binding CreateNewCarCommand}"
-            CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}"
-            Content="Создать Машину" />
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="2*" />
-            </Grid.ColumnDefinitions>
-            <!--  дерева вложенностей  -->
-            <TreeView Grid.Column="0" />
-
-            <!--  текстовое поле  -->
-            <Border
-                Grid.Column="1"
-                Padding="5"
-                BorderBrush="Black"
-                BorderThickness="5"
-                CornerRadius="10">
-                <Frame Name="Frame" />
-            </Border>
-
-        </Grid>
+            VerticalAlignment="Center">
+            <Button
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding BtsMoveCommand, Mode=OneTime}"
+                Content="Вращения"
+                IsEnabled="{Binding IsMove}" />
+            <WrapPanel>
+                <Button
+                    Margin="0,5,0,0"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Command="{Binding OpenCloseDoor}"
+                    Content="Отркыть/Закрыть" />
+                <TextBox
+                    Width="30"
+                    Margin="5,5,0,0"
+                    VerticalContentAlignment="Center"
+                    Text="{Binding SelectedDoor}" />
+            </WrapPanel>
+            <Button
+                Margin="0,5,0,0"
+                Command="{Binding CalculateWeight}"
+                Content="Расчет общее вес " />
+        </StackPanel>
     </Grid>
 </Page>

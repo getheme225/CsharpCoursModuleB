@@ -18,7 +18,7 @@ namespace Work1_Car
        /// </summary>
        public ICollection<Detail> Details { get; private set; }
         
-       public override double Weight => Details.Any() ? Details.Sum(weigthDetail => weigthDetail.Weight) : 0;
+       public override double Weight => Details.Any() ? Details.Sum(weigthDetail => weigthDetail.Weight ) + 0.6 : 0;
        public override string Name => _name;
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Work1_Car
            DetailInitialisation(countofWheels, countofDoors, wheelsWeight, doorsWeight, bodyWeight);
            this._name = name;
        }
-
+        
        /// <summary>
        /// Инициялизация детатей автомобил
        /// </summary>

@@ -14,21 +14,17 @@ namespace Work1_Car
         /// </summary>
         private bool _isOpen;
 
-        /// <summary>
-        /// Вес колеса
-        /// </summary>
-       private double _weight;
-
+   
         /// <summary>
         /// Вес двери 
         /// </summary>
         [NotNullValidator]
-        public sealed override double Weight => _weight;
+        public  override double Weight { get;  }
 
         /// <summary>
         /// Имя деталью, по умольчанию Дверь
         /// </summary>
-        public sealed override string Name { get; }
+        public  override string Name { get; }
 
         /// <summary>
         /// Порядковый номер двери 
@@ -44,7 +40,7 @@ namespace Work1_Car
         public Door(double weigth, int number , string name = "Дверь" )
         {
             _isOpen = false;
-            this._weight = weigth;
+            Weight = weigth;
             Number = number;
             Name = name;
         }

@@ -19,21 +19,13 @@ namespace TestWork.Pages
     /// <summary>
     /// Interaction logic for CarWork.xaml
     /// </summary>
-    public partial class CarWork : Page,IPageOpenable
+    public partial class CarWork : Page
     {
         public CarWork()
         {
             InitializeComponent();
-            MainCarWork();
+           
         }
-
-        private void MainCarWork()
-        {
-            Frame.NavigationService.Navigate(new CreateCar());
-        }
-        public void OpenPage(Page page)
-        {
-            Frame.NavigationService?.Navigate(page);
-        }
+        
     }
 }
