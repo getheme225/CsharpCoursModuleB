@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using PropertyChanged;
@@ -139,8 +140,11 @@ namespace TestWork.ViewModel
         /// <summary>
         /// Дерево
         /// </summary>
-        public List<TreeNodes> Tree =>  (Car !=null)? new List<TreeNodes> { new TreeNodes() { Item = Car , Name=Car.Name } } : new List<TreeNodes>() ;
+        public ObservableCollection<TreeNodes> Tree =>  (Car !=null)? new ObservableCollection < TreeNodes >( new List <TreeNodes> { new TreeNodes() { Item = Car , Name=Car.Name } } ): new ObservableCollection<TreeNodes>() ;
+        public object SelectedNodes { get; set; }
+        public string Test => ((TreeViewItem) SelectedNodes)?.Name;
         #endregion
+
 
         /// <summary>
         /// Конструктор

@@ -1,20 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using PropertyChanged;
 using Work1_Car;
 
 namespace TestWork.Helper
 {
-   public  class TreeNodes
+    [AddINotifyPropertyChangedInterface]
+    public  class TreeNodes
     {
+        /// <summary>
+        /// Элемент дерево
+        /// </summary>
         public  object Item { get; set; }
 
+        /// <summary>
+        ///  Называние Элемент дерева
+        /// </summary>
         public string Name { get; set; }
        
-
+        /// <summary>
+        ///  Список дочерные элементов
+        /// </summary>
         public List<TreeNodes> Childreens
         {
             get
@@ -35,5 +46,15 @@ namespace TestWork.Helper
                 return list;
             }
         }
+        /// <summary>
+        /// Флаг выбранный элемент 
+        /// </summary>
+        public bool IsSelected { get; set; }
+
+        public static Object SelectecNodes(IEnumerable<TreeNodes> nodes)
+        {
+            return (from node in nodes where node.IsSelected select node.Item).FirstOrDefault();
+        }
+
     }
 }

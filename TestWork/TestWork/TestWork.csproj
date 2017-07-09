@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\AttachePropretySelectedItem.cs" />
     <Compile Include="Helper\IPageOpenable.cs" />
     <Compile Include="Helper\TreeNodes.cs" />
     <Compile Include="Pages\CarWork.xaml.cs">
